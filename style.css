@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #0d0d2b, #1d1d4d);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    height: 80px;
+}
+
+header h1 {
+    font-size: 22px;
+    font-weight: 400;
+    color: #ccc;
+    margin: 0;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 70px;
+    background: linear-gradient(45deg, #00f9ff, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s infinite alternate;
+    margin-bottom: 20px; /* espaçamento entre título e texto */
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px; /* espaçamento entre texto e botão */
+    color: #ccc;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #00f9ff, 0 0 20px #00f9ff, 0 0 30px #00f9ff;
+    }
+    to {
+        text-shadow: 0 0 20px #ff00c8, 0 0 30px #ff00c8, 0 0 40px #ff00c8;
+    }
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #00f9ff, #ff00c8);
+    border: none;
+    border-radius: 50px;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 0 20px #00f9ff80;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #00f9ff, 0 0 40px #ff00c8;
+}
+
+.registration-section {
+    padding: 80px 20px;
+    background: radial-gradient(circle at top left, #1f1f3d, #0d0d2b);
+}
+
+.registration-section h2 {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.registration-section p {
+    text-align: center;
+    color: #bbb;
+    margin-bottom: 40px;
+}
+
+.registration-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.registration-form input,
+.registration-form select {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    background: #292952;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 249, 255, 0.2);
+}
+
+.registration-form input::placeholder {
+    color: #aaa;
+}
+
+.registration-form button {
+    padding: 15px;
+    background: linear-gradient(45deg, #00f9ff, #ff00c8);
+    border: none;
+    border-radius: 50px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.registration-form button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #00f9ff, 0 0 40px #ff00c8;
+}
+
+footer.site-footer {
+    text-align: center;
+    padding: 20px;
+    background: #0d0d2b;
+    color: #777;
+    font-size: 14px;
+}
+
+/* Efeito de background animado com pontos (tipo matrix) */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero-section,
+.registration-section,
+header,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 20px;
+    }
+
+    .registration-section h2 {
+        font-size: 28px;
+    }
+}
